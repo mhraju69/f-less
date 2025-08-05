@@ -1,0 +1,23 @@
+.whatsapp {
+    scale: 0.6;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    z-index: 1000;
+
+}
+.whatsapp img {
+  background-color: rgba(0, 0, 0, 0);
+  display: block;
+}
+
+
+.whatsapp h3 {
+    font-size: larger;
+    opacity: 0;
+    transition: 0.3s all;
+}
+
+.whatsapp:hover h3 {
+    opacity: 1;
+}

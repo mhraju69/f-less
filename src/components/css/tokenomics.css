@@ -1,0 +1,212 @@
+
+        :root {
+            --bg-dark: #0A0A0A;
+            --gold: #FFD700;
+            --blue: #00C2FF;
+            --green: #4CAF50;
+            --orange: #FFA500;
+            --red-orange: #FF6B35;
+            --red: #FF5555; 
+            --purple: #9C27B0;
+            --card-bg: rgba(26, 26, 26, 0.7);
+            --text-light: #F0F0F0;
+            --text-muted: #AAAAAA;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+            padding: 40px 20px;
+        } */
+
+        @keyframes float {
+            0% { transform: translateY(0) translateX(0); opacity: 0; }
+            50% { opacity: 0.3; }
+            100% { transform: translateY(-100vh) translateX(100px); opacity: 0; }
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-header h2,.font-heading {
+            font-size: 3rem;
+            font-weight: 700;
+            background: linear-gradient(90deg, var(--blue), var(--gold));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 10px;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .tokenomics-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 1024px) {
+            .tokenomics-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Token Cards */
+        .token-cards {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+
+        .token-card {
+            background-color: var(--card-bg);
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .token-card:hover {
+            border-color: var(--gold);
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+            transform: translateY(-3px);
+        }
+
+        .token-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .token-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .token-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .progress-container {
+            width: 100%;
+            height: 8px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            border-radius: 4px;
+            background: linear-gradient(90deg, var(--gold), var(--blue));
+            transition: width 1s ease;
+        }
+
+        .token-details {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+
+        .token-amount {
+            font-weight: 600;
+            color: var(--gold);
+        }
+
+        .token-percent {
+            font-weight: 600;
+        }
+
+        .token-desc {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Pie Chart */
+        .chart-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            min-height: 400px;
+        }
+
+        .chart-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+            height: 400px;
+        }
+
+        .chart-glow {
+            position: absolute;
+            width: 120%;
+            height: 120%;
+            background: radial-gradient(circle, rgba(255, 215, 0, 0.1), transparent 70%);
+            border-radius: 50%;
+            z-index: -1;
+            animation: pulse 3s infinite alternate;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(0.95); opacity: 0.5; }
+            100% { transform: scale(1.05); opacity: 0.8; }
+        }
+
+        .total-supply {
+            position: absolute;
+            top: 50%;
+            left: 29%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .total-supply-label {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 5px;
+        }
+
+        .total-supply-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--gold);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .section-header h2 {
+                font-size: 2rem;
+            }
+            
+            .chart-wrapper {
+                max-width: 300px;
+                height: 300px;
+            }
+        }
+    
