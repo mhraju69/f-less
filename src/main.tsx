@@ -15,6 +15,6 @@ createRoot(document.getElementById('root')!).render(
       <Route path='/airdrop/auth' element={<Auth/>}/>
 
     </Routes>
-    </HashRouter >
+    </HashRouter >  
   </StrictMode>
 );
