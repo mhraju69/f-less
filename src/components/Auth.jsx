@@ -21,7 +21,7 @@ export default function Auth() {
 
     const handleGoogleLogin = () => {
         const googleClientId = "530629707297-nsgqfita3i3vi1ee0flgr48f552t20hd.apps.googleusercontent.com";
-        const redirectUri = "https://mhraju69.github.io/f-less/#/airdrop/auth"; // <-- make sure this matches Google's OAuth setting
+        const redirectUri = "https://mhraju69.github.io/f-less/airdrop/auth"; // <-- make sure this matches Google's OAuth setting
         const baseUrl = "https://accounts.google.com/o/oauth2/v2/auth";
 
         const authUrl = `${baseUrl}?client_id=${googleClientId}&redirect_uri=${redirectUri}&response_type=code&scope=openid%20email%20profile&access_type=offline&prompt=consent`;
